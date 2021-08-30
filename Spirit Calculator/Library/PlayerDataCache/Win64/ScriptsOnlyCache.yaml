@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CalculateValues
+    - LevelManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -56,25 +57,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1978}
     - Class: 114
-      Script: {instanceID: 2256}
+      Script: {instanceID: 2062}
     - Class: 114
-      Script: {instanceID: 2360}
+      Script: {instanceID: 2258}
     - Class: 114
-      Script: {instanceID: 2506}
+      Script: {instanceID: 2362}
     - Class: 114
-      Script: {instanceID: 2546}
+      Script: {instanceID: 2508}
     - Class: 114
-      Script: {instanceID: 2686}
+      Script: {instanceID: 2548}
     - Class: 114
-      Script: {instanceID: 2766}
+      Script: {instanceID: 2688}
     - Class: 114
-      Script: {instanceID: 3540}
+      Script: {instanceID: 2768}
     - Class: 114
-      Script: {instanceID: 3646}
+      Script: {instanceID: 3542}
     - Class: 114
-      Script: {instanceID: 3890}
+      Script: {instanceID: 3648}
     - Class: 114
-      Script: {instanceID: 15994}
+      Script: {instanceID: 3892}
+    - Class: 114
+      Script: {instanceID: 25920}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -212,6 +215,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner
     className: PlaymodeTestsController
+  - hash:
+      serializedVersion: 2
+      Hash: c7f554219351f09f79d079922f7a2c8a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CalculateValues
   - hash:
       serializedVersion: 2
       Hash: c1d728126ff1918728036c59106d32b2
@@ -724,10 +733,10 @@ ScriptsOnlyBuild:
     className: TMP_TextEventCheck
   - hash:
       serializedVersion: 2
-      Hash: fe0d00db37a8cde3f13833b8bf020595
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: CalculateValues
+    className: LevelManager
   platform: 19
   scenePathNames:
   - Assets/Scenes/CalculatorScene.unity

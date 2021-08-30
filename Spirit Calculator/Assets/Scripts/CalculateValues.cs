@@ -35,6 +35,34 @@ public class CalculateValues : MonoBehaviour
     [SerializeField]
     GameObject finalValuesScreen;
 
+    // Declare Text objects to display all final values to user
+    [SerializeField]
+    Text finalWeight;
+
+    [SerializeField]
+    Text finalTemp;
+
+    [SerializeField]
+    Text finalAbv;
+
+    [SerializeField]
+    Text finalDensity;
+
+    [SerializeField]
+    Text finalBulkLitres;
+
+    [SerializeField]
+    Text finalPureAlcoholLitres;
+
+    [SerializeField]
+    Text finalRequiredAbv;
+
+    [SerializeField]
+    Text finalWaterRequired;
+
+    [SerializeField]
+    Text finalTotalBulkLitres;
+
     public void RunCalculations()
     {
         // Declare value ints to convert input text's
@@ -68,6 +96,15 @@ public class CalculateValues : MonoBehaviour
             errorMessage.SetActive(true);
             calculateValuesScreen.SetActive(false);
             return;
+        }
+
+        // Calculate Weight - check if user inputs value for this, if not run calculation
+        // Weight = Bulk Litres * Density
+        if (weightInput.text == "")
+        {
+            Debug.Log("NO WEIGHT! Calculating Weight...");
+            weightFloat = bulkLitresFloat * densityFloat;
+            Debug.Log("Calculated Bulk Litres: " + bulkLitresFloat);
         }
 
         // Convert Abv %'s to decimal
@@ -106,5 +143,16 @@ public class CalculateValues : MonoBehaviour
         // Display final values screen to player - disable enter values screen
         finalValuesScreen.SetActive(true);
         calculateValuesScreen.SetActive(false);
+
+        // Alter FinalValuesScreen text obj's to actual values to display
+        finalWeight.text = weightFloat.ToString();
+        finalTemp.text = tempFloat.ToString();
+        finalAbv.text = abvFloat.ToString();
+        finalDensity.text = densityFloat.ToString();
+        finalBulkLitres.text = bulkLitresFloat.ToString();
+        finalPureAlcoholLitres.text = pureAlcoholLitres.ToString();
+        finalRequiredAbv.text = reqAbvFloat.ToString();
+        finalWaterRequired.text = waterRequired.ToString();
+        finalTotalBulkLitres.text = totalBulkLitres.ToString();
     }
 }
