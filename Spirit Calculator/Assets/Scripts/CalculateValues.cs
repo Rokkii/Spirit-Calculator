@@ -154,5 +154,52 @@ public class CalculateValues : MonoBehaviour
         finalRequiredAbv.text = reqAbvFloat.ToString();
         finalWaterRequired.text = waterRequired.ToString();
         finalTotalBulkLitres.text = totalBulkLitres.ToString();
+
+        // Check for error values (NaN or Infinity) - replace with N/A
+        if (finalWeight.text == "NaN" || finalWeight.text == "Infinity")
+        {
+            Debug.Log("Final weight produces error, replacing with N/A...");
+            finalWeight.text = "N/A";
+        }
+        if (finalTemp.text == "NaN" || finalTemp.text == "Infinity")
+        {
+            Debug.Log("Final weight produces error, replacing with N/A...");
+            finalTemp.text = "N/A";
+        }
+        if (finalAbv.text == "NaN" || finalAbv.text == "Infinity")
+        {
+            Debug.Log("Final weight produces error, replacing with N/A...");
+            finalAbv.text = "N/A";
+        }
+        if (finalDensity.text == "NaN" || finalDensity.text == "Infinity")
+        {
+            Debug.Log("Final weight produces error, replacing with N/A...");
+            finalDensity.text = "N/A";
+        }
+        if (finalPureAlcoholLitres.text == "NaN" || finalPureAlcoholLitres.text == "Infinity")
+        {
+            Debug.Log("Final weight produces error, replacing with N/A...");
+            finalPureAlcoholLitres.text = "N/A";
+        }
+        if (finalRequiredAbv.text == "NaN" || finalRequiredAbv.text == "Infinity")
+        {
+            Debug.Log("Final weight produces error, replacing with N/A...");
+            finalRequiredAbv.text = "N/A";
+        }
+        if (finalWaterRequired.text == "NaN" || finalWaterRequired.text == "Infinity")
+        {
+            Debug.Log("Final weight produces error, replacing with N/A...");
+            finalWaterRequired.text = "N/A";
+        }
+        if (finalTotalBulkLitres.text == "NaN" || finalTotalBulkLitres.text == "Infinity")
+        {
+            Debug.Log("Final weight produces error, replacing with N/A...");
+            finalTotalBulkLitres.text = "N/A";
+        }
+        if (finalBulkLitres.text == "NaN" || finalBulkLitres.text == "Infinity")
+        {
+            Debug.Log("Final weight produces error, replacing with N/A...");
+            finalBulkLitres.text = "N/A";
+        }
     }
 }
