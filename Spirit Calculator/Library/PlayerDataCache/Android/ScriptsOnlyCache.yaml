@@ -11,6 +11,8 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    Unity.Timeline.Editor.dll:
+    - TimelinePreferences
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -740,4 +742,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/CalculatorScene.unity
-  playerPath: C:/Projects/Spirit Calculator/Spirit Calculator/TestBuilds/MobileBuild/testBuild_v3.apk
+  playerPath: C:/Projects/Spirit Calculator/Spirit Calculator/TestBuilds/MobileBuild/bulk_spirit_calculator.apk
